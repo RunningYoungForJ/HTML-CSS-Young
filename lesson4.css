@@ -1,0 +1,107 @@
+
+父子选择器／派生选择器
+如下表示：div下的span颜色设置为红色
+父子选择器的每一层都不一定非要是标签，id、class都可以作为父子级别
+*/
+div span{
+  background-color: red;
+
+}
+
+/*
+div下的直接子em和间接子em等都会变成红色
+
+div em{
+  background-color: red;
+}*/
+
+/*
+>表示直接子元素选择器
+*/
+div > em{
+  background-color: red;
+}
+
+/*浏览器遍历父子选择器的顺序是从右向左。*/
+
+/*并列选择器*/
+div.demo{
+  background-color: red;
+}
+
+/*
+会选择#idDiv p样式，因为它的权重总值大于#classDiv #classP
+只要写在同一排的选择器，就把它们的权重值相加即可，不必在意这一行的选择器是否重复描述。
+如果权重值一样，则以最后的样式为主，后面的样式会覆盖前面权重值一样的样式。
+*/
+#idDiv p{
+  background-color: red;
+}
+
+.classDiv .classP{
+  background-color: green;
+
+}
+/*
+分组选择器
+使用逗号给不同元素设置同样的样式
+*/
+/*em,strong,span{
+  background-color: red;
+}*/
+/*等价于
+em{
+  background-color: red;
+}
+strong{
+  background-color: red;
+}
+span{
+  background-color: red;
+}*/
+
+/*css基础*/
+
+/*
+查阅css样式属性，可以访问：http://www.css88.com/book/css/
+*/
+
+div{
+  font-size: 50px;
+  font-weight: bold;/*lighter normal bold bolder*/
+  font-style: italic;
+  font-family: arial;/*arial是乔布斯发明的*/
+  color: green;/*设置字体颜色只有color，没有font-color*/
+  border: 10px solid black;/*给容器加一个外边框*/
+}
+
+/*
+border是一个复合属性，=border-width+border-style+border-color
+每一个border边可以单独设置，每一个边同样是一个复合属性
+画三角形通过border来画，分别设置它的四条边的属性
+*/
+/*
+设置颜色的方法：
+1. 英文单词
+2. 颜色代码
+    每两位代表一个颜色，#ff4400
+    r：00-ff、g：00-ff、b：00-ff
+    每两位重复的话，可以简写为一个，#ff4400=#f40
+3. 颜色函数
+*/
+
+/*
+在设置字体粗细的时候，font-weight仅仅是用来说明期望的粗细。
+但浏览器在最后渲染的时候，需要在当前字体的字体包中查找有没有对应font-weight值，如果没有，也不会进行修改
+*/
+/*
+css代码写在大括号内，代码由属性名：属性值构成，多个属性之间分号相隔
+设置字体是设置字体的高
+*/
+
+strong{
+  font-size: 50px;
+}
+/*
+strong所用的加粗样式就是用的font-weight=bold
+类似，em用的斜体样式就是font-style=italic
