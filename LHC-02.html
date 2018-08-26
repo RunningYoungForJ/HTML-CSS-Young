@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh_CN">
+    <meta charset="utf-8">
+    <title>Styles Conference</title>
+  </head>
+  <body id="top">
+    <header>
+      <h1>Styles Conference</h1>
+      <h3>August 24&ndash;26th &mdash; Chicago, IL</h3>
+      <h2>02笔记</h2>
+      <ul>
+        <li>特殊编码</li>
+        <li>特殊的标点、符号需要在html中编码后才能显示</li>
+        <li>编码字符的格式：&开始，分号结束</li>
+      </ul>
+      <ul>
+        <li>超链接标签a</li>
+        <li>href属性是链接的目的地址</li>
+        <li>在a标签中，可以包含块级元素，这样，点击一整块均可以进入href地址</li>
+        <li>链接到email地址，href需要前缀：mailto：会默认打开用户设置的邮件客户端</li>
+        <li>如果需要subject、body等邮件参数，需要在邮件地址后按query param的方式拼接这些参数</li>
+        <ul>
+          <li>?:第一个参数与path拼接</li>
+          <li>&:后续参数拼接，转义编码是</li>
+          <li>空格：使用转义编码%20</li>
+          <li>一个典型的例子是：mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you</li>
+        </ul>
+        <li>链接到当前页面的其它位置：类似于回到顶部、目录功能</li>
+        <ul>
+          <li>使用标签的id属性来定位标签</li>
+          <li>href中使用#id</li>
+        </ul>
+      </ul>
+      <ul>
+        <li>超链接最常用的两种：当前网站的不同页面；不同网站</li>
+        <li>链接到当前网站的不同页面，使用<strong>相对路径</strong></li>
+        <li>链接到不同网站的页面，需要使用绝对路径，包含domain信息</li>
+        <li></li>
+      </ul>
+
+    </header>
+
+    <section>
+      <section>
+        <h3>块级元素/行级元素</h3>
+      </section>
+      <section>
+        <h2>Dedicated to the Craft of Building Websites</h2>
+        <p>Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!</p>
+      </section>
+
+      <section>
+        <h5>Speakers</h5>
+        <h3>World-Class Speakers</h3>
+        <p>Joining us from all around the world are over twenty fantastic speakers, here to share their stories.</p>
+      </section>
+    </section>
+    <a href="LHC-01.html" target="_blank">about</a>
+    <a href="https://www.baidu.com" target="_blank">baidu</a>
+    <a href="mailto:yangkunk@yonyou.com?subject=test%20email&body=这是测试的">email</a>
+    <a href="#top">回到顶部</a>
+
+    <footer>
+      <small>&copy; Styles Conference</small>
+    </footer>
+  </body>
+</html>
